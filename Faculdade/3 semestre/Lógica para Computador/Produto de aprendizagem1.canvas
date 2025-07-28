@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"304350baab1cb920","type":"text","text":"# LÓGICA PARA COMPUTAÇÃO\n\n---","x":-39,"y":-258,"width":490,"height":143,"color":"6"},
+		{"id":"be51b90b2ec1012f","type":"text","text":"## PROPOSIÇÃO\n\n---\nÉ uma senteça declarativa que pode ser avaliada como verdadeira ou falsa, nunca ambos. É feita de forma clara, sem ambiguidade","x":168,"y":213,"width":317,"height":237,"color":"3"},
+		{"id":"212781ac976cdcd9","type":"text","text":"### SIMPLES e COMPOSTA\n\n---\n**Proposição Simples:** apenas uma proposição, representado por letra minúscula\n**Proposição Composta:** duas ou mais proposições com conectivos entre elas, representado por letra maiúscula","x":485,"y":630,"width":343,"height":330,"color":"3"},
+		{"id":"69432b9281414712","type":"text","text":"### Princípios Fundamentais\n\n---\n\n1) Princípio da Não Contradição\n\t- uma expressão não pode ser verdadeira e falsa ao mesmo tempo\n2) Princípio do Terceiro Excluído\n\t- uma proposição só pode ter dois valores verdades, verdadeira ou falsa\n","x":-447,"y":634,"width":612,"height":248,"color":"3"},
+		{"id":"a2e5150ad2523009","type":"text","text":"### Paralelo\n\n---\nNotação\n- ( + )\n\nInterruptores ligados em paralelo. Corrente elétrica pode passar se pelo menos 1 estiver fechado","x":-1275,"y":171,"width":302,"height":301,"color":"2"},
+		{"id":"a3931eb1848c4ee1","type":"text","text":"### Serial\n\n---\nNotação\n- ( • )\n\ninterruptores ligados em série. Corrente elétrica passa se TODOS estiverem fechados","x":-1275,"y":-412,"width":275,"height":301,"color":"2"},
+		{"id":"429e1e30eb9e0847","type":"text","text":"## INTERRUPTORES\n\n---\nDispositivos responsável por fazer o controle da corrente elétrica em um circuito. Podem assumir dois estado, ABERTO ou FECHADO.","x":-669,"y":-187,"width":337,"height":236,"color":"2"},
+		{"id":"fe1f864ac6a15ed8","type":"text","text":"### Taulogia\n\n---\nO valor lógico de uma preposição é sempre verdadeiro (1) ","x":1453,"y":-422,"width":250,"height":205,"color":"4"},
+		{"id":"fda13a0ac4d88db5","type":"text","text":"---\n\n---\n## TABELA VERDADE\n\n---\nDetermina os valores lógicos de uma proposição. Para saber a quantidade de linhas que a tabela assumirá basta fazer $2^n$. Onde n = numero de preposições simples.\n","x":828,"y":-217,"width":267,"height":296,"color":"4"},
+		{"id":"e35e61e5980807ad","type":"text","text":"### Contradição\n\n--- \nO valor lógico de uma preposição é sempre falso (0) ","x":1507,"y":-111,"width":250,"height":205,"color":"4"},
+		{"id":"afce55c3eca68be8","type":"text","text":"### Contingência\n\n---\nO valor lógico de uma preposição assume verdadeiro (1) ou falso (0)","x":1453,"y":209,"width":250,"height":205,"color":"4"},
+		{"id":"3c6c9579facfd858","type":"text","text":"### Negação (NÃO)\n\n---\nNotação: \n- !A\n- 'A\n- ¬A\n\nse A = 1, então 'A = 0\n","x":-746,"y":-876,"width":222,"height":309,"color":"1"},
+		{"id":"2ae8386448dca87c","type":"text","text":"### Conjunção (E)\n\n---\nNotação:\n- ( • )\n- ( ^ )\n\nSomente é verdadeira se as duas proposições também são.","x":-750,"y":-1273,"width":283,"height":311,"color":"1"},
+		{"id":"6074f59bc8933b65","type":"text","text":"### Disjunção Exclusiva (XOR)\n\n---\nNotação:\n- ( ⊕ )\n- ( ⊻ )\n\nSomente é verdadeira se os operandos forem lógicamente diferentes. Ou seja, se um for verdadeiro e o outro falso.\n","x":260,"y":-1610,"width":476,"height":303,"color":"1"},
+		{"id":"bbc1d3dbe7a59386","type":"text","text":"### Disjunção Inclusiva (OU)\n\n---\nNotação:\n- ( + )\n- ( v )\n\nSoma lógica, será falsa somente se as duas proposições forem falsa. Será verdade nos demais casos.","x":-306,"y":-1606,"width":460,"height":303,"color":"1"},
+		{"id":"12c9dbd872f93444","type":"text","text":"### Condicional (Se ... Então)\n\n---\nNotação:\n- ( → )\n\nSerá falsa somente se a primeira porposição for verdadeira e a segunda for falsa. Será verdadeira nos demais casos.\n- ATENÇÃO!!\n\t- A recíproca pode não ser verdadeira!\n\t\t-  A →  B ≠ B → A\n","x":840,"y":-1324,"width":386,"height":396,"color":"1"},
+		{"id":"e6b1c830efe0a70f","type":"text","text":"### Bicondicional ( Se e somente se)\n\n---\nNotação:\n- ( ⟷ )\n\nSerá verdadeira somente se o valor lógico de ambas as proposições forem iguais. Será falsa nos demais casos. (A →  B = B → A)","x":828,"y":-863,"width":393,"height":320,"color":"1"},
+		{"id":"50c518651b213b9f","type":"text","text":"## OPERADORES LÓGICOS\n\n---\nOperadores lógicos atuam no modo que o valor lógico se transformará. Os operadores lógicos fundamentais são: \n- Negação\n- Conjunção\n- Disjunção Inclusiva\n- Disjunção Exclusiva\n- Condicional\n- Bicondicional","x":40,"y":-805,"width":394,"height":393,"color":"1"}
+	],
+	"edges":[
+		{"id":"742a452509c5846c","fromNode":"fda13a0ac4d88db5","fromSide":"right","toNode":"fe1f864ac6a15ed8","toSide":"left","color":"4"},
+		{"id":"e32816e196370937","fromNode":"fda13a0ac4d88db5","fromSide":"right","toNode":"e35e61e5980807ad","toSide":"left","color":"4"},
+		{"id":"e6df34ccb5993a78","fromNode":"fda13a0ac4d88db5","fromSide":"right","toNode":"afce55c3eca68be8","toSide":"left","color":"4"},
+		{"id":"74406e5e984aefb6","fromNode":"304350baab1cb920","fromSide":"right","toNode":"fda13a0ac4d88db5","toSide":"left","color":"6"},
+		{"id":"ce2dea7c9fe39d27","fromNode":"50c518651b213b9f","fromSide":"top","toNode":"3c6c9579facfd858","toSide":"right","color":"1"},
+		{"id":"d48cf5498dee0d2d","fromNode":"50c518651b213b9f","fromSide":"top","toNode":"2ae8386448dca87c","toSide":"right","color":"1"},
+		{"id":"e72a8d2ead43f77c","fromNode":"50c518651b213b9f","fromSide":"top","toNode":"bbc1d3dbe7a59386","toSide":"bottom","color":"1"},
+		{"id":"227a6517d64c6889","fromNode":"50c518651b213b9f","fromSide":"top","toNode":"e6b1c830efe0a70f","toSide":"left","color":"1"},
+		{"id":"3dc853626593f994","fromNode":"304350baab1cb920","fromSide":"top","toNode":"50c518651b213b9f","toSide":"bottom","color":"6"},
+		{"id":"13fe2607a819fb9b","fromNode":"be51b90b2ec1012f","fromSide":"bottom","toNode":"69432b9281414712","toSide":"top","color":"3"},
+		{"id":"213eb91a360e14e3","fromNode":"be51b90b2ec1012f","fromSide":"bottom","toNode":"212781ac976cdcd9","toSide":"top","color":"3"},
+		{"id":"c93f67bbfcee2600","fromNode":"304350baab1cb920","fromSide":"bottom","toNode":"be51b90b2ec1012f","toSide":"top","color":"6"},
+		{"id":"1bb6395c725dfdc7","fromNode":"429e1e30eb9e0847","fromSide":"left","toNode":"a2e5150ad2523009","toSide":"right","color":"2"},
+		{"id":"5146b45fde7e7c08","fromNode":"429e1e30eb9e0847","fromSide":"left","toNode":"a3931eb1848c4ee1","toSide":"right","color":"2"},
+		{"id":"61a55ccc895980a5","fromNode":"304350baab1cb920","fromSide":"left","toNode":"429e1e30eb9e0847","toSide":"right","color":"6"},
+		{"id":"31bcb679dbf7b1a4","fromNode":"50c518651b213b9f","fromSide":"top","toNode":"12c9dbd872f93444","toSide":"left","color":"1"},
+		{"id":"c4291c7a740c99ff","fromNode":"50c518651b213b9f","fromSide":"top","toNode":"6074f59bc8933b65","toSide":"bottom","color":"1"}
+	]
+}

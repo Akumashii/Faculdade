@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"id":"7444d995de13c574","type":"group","x":40,"y":-360,"width":1580,"height":627,"color":"#64d385","label":"PESSOA (única tabela)"},
+		{"id":"984816e2bc1f2264","type":"text","text":"Modelo Lógico:\nSistema de gestão de jogos, equipes, ranking, clubes da superliga de voleibol\n- pessoa com nome, dataNascimento, apelido, cpf, telefone, email, gênero\n- treinadores é uma pessoa, tipo, licença\n- preparadores é uma pessoa, tipo, código conselho\n- jogadores é uma pessoa, tipo, posição, altura\n- times com nomes, lista de patrocinadores, clube, endereço, lista de centro de treinamento\n- jogos com 2 times, data, hora, clube, arbitro principal, arbitro secundário, árbitro de mesa, arbitro reserva, placar1SetCasa, placar1SetVisitante, placa2SetCasa, placar2SetVisitante, placar3SetCasa, placar3SetVisitante, placar4SetCasa, placar4SetVisitante, placar5SetCasa, placar5SetVisitante\n- Patrocinador(codPatrocinador, nome, endereço, campo)\n\t- chave: nome\n- TipoPessoa(codTipoPessoa, descricao)\n\t- chave: descricao\n- Pessoa(cpf, nome, dataNasc, apelido, tipo, licencaTreinador, codigoConselhoPreparador,  posicaoJogador, alturaJogador, licencaArbitro)\n\t- chave: cpf\n  //caso nao tenha valor será NULL\n\t- tipo referencia TipoPessoa(codTipoPessoa)\n- Time(cnpj, nome, cidade)\n\t- chave: cnpj\n- Pessoa_Time(pessoa, time, dataInicio, dataFim)\n\t- chave: pessoa, time, dataInicio\n\t- pessoa referencia Pessoa(cpf)\n\t- time referencia Time(cnpj)\n- Jogo(codJogo, data, hora, timeCasa, timeVisitante, arbitroPrincipal, ...)\n\t- chave: codJogo\n\t- timeCasa referencia Time(cnpj)\n\t- timeVisitante referencia Time(cnpj)\n\t- arbitroPrincipal referencia Pessoa(cpf)","x":-495,"y":-307,"width":515,"height":1062,"color":"5"},
+		{"id":"29c658e3388228a4","type":"text","text":"Pessoa\n- codPessoa\n- nome\n- dataNasc\n- apelido","x":525,"y":-307,"width":250,"height":187,"color":"4"},
+		{"id":"12c47078868faf8e","type":"text","text":"Treinador\n- pessoa\n- licenca","x":200,"y":39,"width":250,"height":161,"color":"4"},
+		{"id":"7977d128e7dc1666","type":"text","text":"Preparador\n- pessoa\n- codigo conselho","x":525,"y":39,"width":250,"height":203,"color":"4"},
+		{"id":"fd77f1befffbd244","type":"text","text":"Jogador\n- pessoa\n- altura\n- posicao","x":840,"y":38,"width":250,"height":203,"color":"4"},
+		{"id":"142d33e52d31318b","type":"text","text":"Arbitro\n- licença","x":1160,"y":39,"width":250,"height":127,"color":"4"},
+		{"id":"688e6b3e58b35106","type":"text","text":"Jogo\n- data\n- hora\n","x":1160,"y":780,"width":250,"height":160,"color":"6"},
+		{"id":"35f4223ef7a77f98","type":"text","text":"Patrocinadores\n- codPatrocinador\n- nome","x":1167,"y":487,"width":250,"height":143,"color":"1"},
+		{"id":"7afaf5ba2d1e4843","type":"text","text":"Time \n- codTime\n","x":252,"y":445,"width":250,"height":186,"color":"3"},
+		{"id":"0d7ffbf8b8a846f3","type":"text","text":"1","x":344,"y":630,"width":66,"height":59},
+		{"id":"d573a07d43d7b93a","type":"text","text":"1","x":491,"y":602,"width":66,"height":59},
+		{"id":"a198b9ccc107a10c","type":"text","text":"0 .. *","x":1056,"y":534,"width":111,"height":50},
+		{"id":"b32a900aa5880baa","type":"text","text":"1 .. *","x":1067,"y":779,"width":100,"height":50},
+		{"id":"e75fedbf7661670c","type":"text","text":"1 .. *","x":1068,"y":879,"width":99,"height":50},
+		{"id":"2e5b254fb453a751","type":"text","text":"1 .. *","x":1408,"y":829,"width":100,"height":50},
+		{"id":"0f5254dabcea5596","type":"text","text":"1 .. *","x":492,"y":513,"width":106,"height":50},
+		{"id":"78d8c9a16d975b11","type":"text","text":"1 .. *","x":491,"y":455,"width":104,"height":50},
+		{"id":"bc16aba4b2dd90ba","type":"text","text":"1 .. *","x":325,"y":395,"width":104,"height":50},
+		{"id":"7da449244f6e8d0a","type":"text","text":"1 .. *","x":149,"y":505,"width":103,"height":60},
+		{"id":"7a0667fa8f998a38","type":"text","text":"1 .. *","x":270,"y":192,"width":110,"height":50},
+		{"id":"af3673111f5fee43","type":"text","text":"1 .. *","x":598,"y":241,"width":104,"height":50},
+		{"id":"538a2ee63b880935","type":"text","text":"daria pra fazer tudo em 1 esse dataInicio e dataFim","x":992,"y":335,"width":250,"height":60},
+		{"id":"961d65701d2c3c89","type":"text","text":"1 .. *","x":913,"y":241,"width":104,"height":50},
+		{"id":"2bca03ea5c075c02","type":"text","text":"1 .. *","x":1408,"y":91,"width":96,"height":50}
+	],
+	"edges":[
+		{"id":"87188ce1727bfe74","fromNode":"12c47078868faf8e","fromSide":"top","toNode":"29c658e3388228a4","toSide":"bottom","toEnd":"none"},
+		{"id":"e32ad4965b6e944f","fromNode":"7977d128e7dc1666","fromSide":"top","toNode":"29c658e3388228a4","toSide":"bottom","toEnd":"none"},
+		{"id":"92750d6df9dee32b","fromNode":"fd77f1befffbd244","fromSide":"top","toNode":"29c658e3388228a4","toSide":"bottom","toEnd":"none"},
+		{"id":"64c3c73741b3c9dd","fromNode":"7da449244f6e8d0a","fromSide":"left","toNode":"7a0667fa8f998a38","toSide":"left","toEnd":"none","label":"dataInicio\ndataFim"},
+		{"id":"2b74ad1030875c56","fromNode":"bc16aba4b2dd90ba","fromSide":"top","toNode":"af3673111f5fee43","toSide":"bottom","toEnd":"none","label":"dataInicio\ndataFim"},
+		{"id":"87b693c5922c0a9a","fromNode":"78d8c9a16d975b11","fromSide":"right","toNode":"961d65701d2c3c89","toSide":"bottom","toEnd":"none","label":"dataInicio\ndataFim"},
+		{"id":"29a9bff7755e785a","fromNode":"0f5254dabcea5596","fromSide":"right","toNode":"a198b9ccc107a10c","toSide":"left","toEnd":"none"},
+		{"id":"314c4d2b9499a06b","fromNode":"29c658e3388228a4","fromSide":"bottom","toNode":"142d33e52d31318b","toSide":"top","toEnd":"none"},
+		{"id":"648c65501360043b","fromNode":"2bca03ea5c075c02","fromSide":"right","toNode":"2e5b254fb453a751","toSide":"right","toEnd":"none"},
+		{"id":"1bda6b9978739a11","fromNode":"d573a07d43d7b93a","fromSide":"right","toNode":"b32a900aa5880baa","toSide":"left","toEnd":"none","label":"Visitante"},
+		{"id":"c46074faa91f59df","fromNode":"e75fedbf7661670c","fromSide":"left","toNode":"0d7ffbf8b8a846f3","toSide":"bottom","toEnd":"none","label":"Casa"}
+	]
+}

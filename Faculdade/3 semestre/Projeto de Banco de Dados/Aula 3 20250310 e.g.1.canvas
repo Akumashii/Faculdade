@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"89fd7a5dee3ce9e7","type":"text","text":"Modelo Lógico:\n- Paciente(**codPac**, nome, ...)\n- Medico(**codMed**, nome, ...)\n- Consulta(**codConsulta**, codMed,codPac, data, hora)\n","x":-758,"y":115,"width":498,"height":165,"color":"5"},
+		{"id":"c16cfac906fc2082","type":"text","text":"Paciente (0..n)\n- codPac\n- nome","x":-720,"y":-220,"width":250,"height":150},
+		{"id":"c11737dfa803d3f4","type":"text","text":"Consulta\n- data\n- hora","x":-300,"y":-120,"width":250,"height":124},
+		{"id":"1563b0dffd7d8c85","type":"text","text":"Medico (1..n)\n- codMed\n- nome","x":140,"y":-220,"width":250,"height":150}
+	],
+	"edges":[
+		{"id":"d920a160fb7f7066","fromNode":"c16cfac906fc2082","fromSide":"right","toNode":"c11737dfa803d3f4","toSide":"left","toEnd":"none"},
+		{"id":"170c2ad9666edac2","fromNode":"c11737dfa803d3f4","fromSide":"right","toNode":"1563b0dffd7d8c85","toSide":"left","toEnd":"none"}
+	]
+}

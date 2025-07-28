@@ -1,0 +1,66 @@
+- rede geografica
+	- PAN
+	- LAN
+	- MAN
+	- WAN
+- tipos de rede
+	- cliente/servidor
+	- peer to peer
+- topologias
+	- tipo de arranjo
+		- ponto a ponto
+		- multiponto
+	- topologia física
+		- barra
+		- anel
+		- estrela
+		- rede hibrida
+		- malha
+		- arvore
+- meio de transmissao
+	analogico x digital 
+	- principais formas de transmissão
+		- ar
+		- cabo
+		- fibra ótica
+	- meios de transmissão
+		- cabo coaxial
+		- par trançado
+		- fibra ótica
+		- radiodifusão
+			- satélites
+		- backbone (não é um meio, mas não deixa de ser uma forma de transmissão)
+- equipamentos
+	- placa de rede
+	- hubs
+	- switchers
+	- roteadores
+	- bridges
+	- repetidores
+	- modens
+---
+- Arquiteturas
+	- Tipos de Servidores:
+		- Arquivos
+		- Banco de dados
+		- Impressão
+		- Comunicação
+		- Gerenciamento
+- Cliente-Servidor
+	- Cliente (entidade que solicita o serviço)
+	- Servidor(entidade que presta o serviço)
+		- dedicado
+			- não tem mouse nem teclado, uso exclusivo para rede, contém apenas seus dados
+		- não dedicado
+			- um servidor que compartilha recursos com outros clientes, ele é compartilhado por outras organizações.
+	Cliente faz a solicitação para o servidor através da rede, sistema baseado em solicitações e resposta.
+- Peer-to-Peer
+		Intereção entre dispositvios no mesmo nível de comunicação
+		Um ponto pode ser servidor e cliente ao mesmo tempo. Torrent
+- Protocolos
+	conjunto de padrões de comunicação, para intercambio de dados entre computadores eles precisam falar a mesma língua, usarem os mesmos protocolos para comunicação
+	- exemplo:
+		- NetBeui (redes microsoft) 
+		- IPX/SPX (redes netware) 
+		- TCP/IP (qualquer rede) 
+			- atualmente a maneira global utilizada 

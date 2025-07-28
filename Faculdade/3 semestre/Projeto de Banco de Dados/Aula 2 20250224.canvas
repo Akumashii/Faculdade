@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"6b6aea009af7b1be","type":"group","x":-1880,"y":-160,"width":1140,"height":640,"label":"Modelo Conceitual (EXEMPLO)"},
+		{"id":"6ff2c7740cb35524","type":"text","text":"Produto:\n- descrição\n- marca\n- modelo\n- codigo produto","x":-1258,"y":240,"width":288,"height":200,"color":"5"},
+		{"id":"fb0b579016cc6d91","type":"text","text":"isto é uma ENTIDADE com atributos e chave primária\n","x":-1560,"y":219,"width":250,"height":81},
+		{"id":"cd6dfe4e6ac041b2","type":"text","text":"Cliente:\n- cpf\n- nome\n- endereço\n- .....\n","x":-1672,"y":-134,"width":252,"height":214,"color":"5"},
+		{"id":"db0db9eff4532f5e","type":"text","text":"entidade (modelo ER)\nclasses (modelo O.O)\ncategoria","x":-1856,"y":143,"width":250,"height":90},
+		{"id":"4e03e7c23b45f3f3","type":"text","text":"1 ... 1","x":-1469,"y":-95,"width":109,"height":52},
+		{"id":"ded4b7d0e7d4684e","type":"text","text":"O.S:\n- numeroOS (único, assim, atributo chave primário)\n","x":-1120,"y":-126,"width":300,"height":166,"color":"3"},
+		{"id":"80fd0d42d0103c83","type":"text","text":"1 ... n","x":-1200,"y":-27,"width":109,"height":50},
+		{"id":"bff7f17a1b015dce","type":"text","text":"0 ... n","x":-948,"y":23,"width":114,"height":55},
+		{"id":"c01eded5bdde1760","type":"text","text":"1 ... n","x":-1092,"y":203,"width":111,"height":60}
+	],
+	"edges":[
+		{"id":"153ebd596162adcf","fromNode":"6ff2c7740cb35524","fromSide":"top","toNode":"ded4b7d0e7d4684e","toSide":"bottom"},
+		{"id":"696a270b7b52e256","fromNode":"fb0b579016cc6d91","fromSide":"top","toNode":"cd6dfe4e6ac041b2","toSide":"bottom"},
+		{"id":"cb349782240f4199","fromNode":"db0db9eff4532f5e","fromSide":"top","toNode":"cd6dfe4e6ac041b2","toSide":"bottom"},
+		{"id":"01498c3796a85dff","fromNode":"cd6dfe4e6ac041b2","fromSide":"right","toNode":"ded4b7d0e7d4684e","toSide":"left"}
+	]
+}

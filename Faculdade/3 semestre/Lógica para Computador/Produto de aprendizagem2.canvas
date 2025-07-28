@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"d5a98a7414dbca77","type":"text","text":"# EQUIVALÊNCIA LÓGICA\n---\n","x":-176,"y":-65,"width":416,"height":105,"color":"6"},
+		{"id":"b2d416a1b4872a4f","type":"text","text":"## Relações de Equivalência\n---\n","x":340,"y":-70,"width":203,"height":115,"color":"2"},
+		{"id":"304c17146f2a8b00","type":"text","text":"### Identidade\n---\np ∧ V ≡ p\np ∨ F ≡ p","x":32,"y":-362,"width":172,"height":176,"color":"1"},
+		{"id":"e16b3226e0de392e","type":"text","text":"### Dominancia\n---\np ∨ V ≡ V\np ∧ F ≡ F","x":259,"y":-537,"width":183,"height":175,"color":"1"},
+		{"id":"f399f98d260fbaca","type":"text","text":"### Leis de Morgan\n---\n¬(p ∧ q) ≡ ¬p ∨ ¬q\n¬(p ∨ q) ≡ ¬p ∧ ¬q","x":1,"y":124,"width":235,"height":175,"color":"1"},
+		{"id":"9f2bed5e65f20c26","x":761,"y":144,"width":250,"height":155,"color":"1","type":"text","text":"### Bicondicional\n---\np ↔ q ≡ (p → q) ∧ (q → p)"},
+		{"id":"8f8ae6329faaca1a","x":534,"y":387,"width":227,"height":175,"color":"1","type":"text","text":"### Leis Associativas\n---\np ∨ (p ∧ q) ≡ p\np ∧ (p ∨ q) ≡ p"},
+		{"id":"e625c546b813f787","type":"text","text":"### Leis Distributivas\n---\np • (q + r) ≡ (p • q) + (p • r)\np + (q • r) ≡ (p + q) • (p + r)\n","x":182,"y":387,"width":260,"height":175,"color":"1"},
+		{"id":"16e8a583c8f55a4c","x":1069,"y":-302,"width":341,"height":578,"color":"1","type":"text","text":"### Condicionais\n---\n#### Equivalências\n\np → q ≡ ¬p ∨ q\n¬(p → q) ≡ p ∧ ¬q\n#### Termos\nAs equivalências condicionais são dividas em (para a proposiçãp p → q):\n- recíprova: q → p\n- inversa: ¬p → ¬q  \n- contrapositiva: ¬q → ¬p\n\nNOTA-SE QUE\na **contrapositiva** é **SEMPRE EQUIVALENTE**, a recíprova e inversa nem sempre são equivalentes.\n"},
+		{"id":"baf15efcf2eacd8d","type":"text","text":"### Dupla Negação\n---\n¬(¬p) ≡ p","x":534,"y":-537,"width":218,"height":174,"color":"1"},
+		{"id":"be7c1b6539546c69","type":"text","text":"### Idempotência\n---\np ∨ p ≡ p\np ∧ p ≡ p","x":809,"y":-361,"width":202,"height":175,"color":"1"},
+		{"id":"1de1dbe3654489b1","type":"text","text":"# Definição\n\n---\nEquivalência lógica é quando duas proposições têm o mesmo valor de verdade em todos os casos. Ou seja, sempre que uma for verdadeira, a outra também será, e vice-versa.\nNotação:\n- A ≡ B \n- A ⇔ B","x":-640,"y":-195,"width":319,"height":364,"color":"5"}
+	],
+	"edges":[
+		{"id":"1aef9761aef2461b","fromNode":"d5a98a7414dbca77","fromSide":"left","toNode":"1de1dbe3654489b1","toSide":"right","color":"6"},
+		{"id":"63be5b4a7cd6faa6","fromNode":"d5a98a7414dbca77","fromSide":"right","toNode":"b2d416a1b4872a4f","toSide":"left","color":"6"},
+		{"id":"c63ba70678ddc1eb","fromNode":"b2d416a1b4872a4f","fromSide":"right","toNode":"16e8a583c8f55a4c","toSide":"left","color":"2"},
+		{"id":"4866b45b570d0c77","fromNode":"b2d416a1b4872a4f","fromSide":"top","toNode":"304c17146f2a8b00","toSide":"right","color":"2"},
+		{"id":"e521881c53ba350e","fromNode":"b2d416a1b4872a4f","fromSide":"top","toNode":"e16b3226e0de392e","toSide":"bottom","color":"2"},
+		{"id":"12264ac8bb1af408","fromNode":"b2d416a1b4872a4f","fromSide":"top","toNode":"baf15efcf2eacd8d","toSide":"bottom","color":"2"},
+		{"id":"855009bf32a5c432","fromNode":"b2d416a1b4872a4f","fromSide":"top","toNode":"be7c1b6539546c69","toSide":"left","color":"2"},
+		{"id":"630cc656d31dbb5b","fromNode":"b2d416a1b4872a4f","fromSide":"bottom","toNode":"f399f98d260fbaca","toSide":"right","color":"2"},
+		{"id":"1ef74061aea2a2b2","fromNode":"b2d416a1b4872a4f","fromSide":"bottom","toNode":"e625c546b813f787","toSide":"top","color":"2"},
+		{"id":"99a30608b1f27e39","fromNode":"b2d416a1b4872a4f","fromSide":"bottom","toNode":"8f8ae6329faaca1a","toSide":"top","color":"2"},
+		{"id":"ff1fc85725bf8c87","fromNode":"b2d416a1b4872a4f","fromSide":"bottom","toNode":"9f2bed5e65f20c26","toSide":"left","color":"2"}
+	]
+}
