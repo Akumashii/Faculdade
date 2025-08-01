@@ -1,0 +1,116 @@
+CREATE DATABASE FRAZZON;
+
+/* Lógico_1: */
+
+CREATE TABLE AUTOR (
+    nome VARCHAR(256),
+    id INTEGER PRIMARY KEY IDENTITY,
+    nacionalidade VARCHAR(256)
+);
+
+CREATE TABLE CATEGORIA (
+    descricao VARCHAR(256),
+    id INTEGER PRIMARY KEY IDENTITY
+);
+
+CREATE TABLE LIVRO (
+    id INTEGER PRIMARY KEY IDENTITY,
+    ISBN VARCHAR(256),
+    titulo VARCHAR(256),
+    ano INTEGER,
+    FK_CATEGORIA_id INTEGER,
+    FK_EDITORA_Atributo_1 INTEGER
+);
+
+CREATE TABLE EDITORA (
+    Atributo_1 INTEGER PRIMARY KEY IDENTITY,
+    nome VARCHAR(256)
+);
+
+CREATE TABLE LIVRO_AUTOR_ESCRITO (
+    FK_AUTOR_id INTEGER,
+    FK_LIVRO_id INTEGER
+);
+ 
+ALTER TABLE LIVRO ADD CONSTRAINT FK_LIVRO_2
+    FOREIGN KEY (FK_CATEGORIA_id)
+    REFERENCES CATEGORIA (id)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE LIVRO ADD CONSTRAINT FK_LIVRO_3
+    FOREIGN KEY (FK_EDITORA_Atributo_1)
+    REFERENCES EDITORA (Atributo_1)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE LIVRO_AUTOR_ESCRITO ADD CONSTRAINT FK_LIVRO_AUTOR_ESCRITO_1
+    FOREIGN KEY (FK_AUTOR_id)
+    REFERENCES AUTOR (id);
+ 
+ALTER TABLE LIVRO_AUTOR_ESCRITO ADD CONSTRAINT FK_LIVRO_AUTOR_ESCRITO_2
+    FOREIGN KEY (FK_LIVRO_id)
+    REFERENCES LIVRO (id);
+
+-------------------------------------------------------------------------- 
+
+INSERT INTO CATEGORIA (descricao) 
+VALUES ('Literatura Juvenil'),
+('Humor'),
+('Ficção Científica');
+
+DELETE FROM AUTOR;
+INSERT INTO AUTOR (nome, nacionalidade) 
+VALUES ('J.K. Rowling', 'Inglaterra'),
+('Clive Stamples Lewis', 'Inglaterra'),
+('Affosnso Solano', 'Brasil'),
+('Marcos Piangers', 'Brasil'),
+('Ciro Botelho - Tiririca', 'Brasil'),
+('Bianca Mól', 'Brasil');
+
+DELETE FROM EDITORA;
+INSERT INTO EDITORA (nome)
+VALUES ('Rocco'),
+('Wmf Martins Fontes'),
+('Casa da Palavra'),
+('Belas Letras'),
+('Matrix');
+
+DELETE FROM LIVRO;
+INSERT INTO LIVRO (ISBN, titulo, ano,  FK_EDITORA_Atributo_1, FK_CATEGORIA_id)
+VALUES ('8532511015', 'Harry Potter e A Pedra Filosofal', 2000, 16, 1),
+('9788578270698', 'As Crônicas de Nárnia', 2009, 17, 1),
+('9788577343348', 'O Espadachim de Carvão', 2013, 18, 3),
+('9788581742458', 'O Papai É Pop', 2015, 19, 2),
+('9788582302026', 'Pior Que Tá Não Fica', 2015, 20, 2),
+('9788588345670', 'Garota Desdobrável', 2015, 18, 1),
+('85325120062', 'Harry Potter e o prisioneiro de Azkaban', 2000, 16, 1);
+
+DELETE FROM LIVRO_AUTOR_ESCRITO;
+INSERT INTO LIVRO_AUTOR_ESCRITO (FK_LIVRO_id, FK_AUTOR_id)
+VALUES (1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5),
+(6,6),
+(7,1);
+
+--------------------------------------------------------------------------
+SELECT L.ISBN, L.titulo, L.ano, L.FK_EDITORA_Atributo_1, L.FK_CATEGORIA_id
+FROM LIVRO AS L;
+
+
+--------------------------------------------------------------------------
+SELECT C.descricao, C.id
+FROM CATEGORIA AS C;
+
+SELECT A.nome, A.nacionalidade
+FROM AUTOR AS A;
+
+SELECT *
+FROM EDITORA;
+
+SELECT L.ISBN, L.titulo, L.ano, L.id
+FROM LIVRO AS L;
+
+SELECT *
+FROM LIVRO;
