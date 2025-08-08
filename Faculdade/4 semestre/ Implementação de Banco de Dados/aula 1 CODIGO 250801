@@ -57,7 +57,6 @@ VALUES ('Literatura Juvenil'),
 ('Humor'),
 ('Ficção Científica');
 
-DELETE FROM AUTOR;
 INSERT INTO AUTOR (nome, nacionalidade) 
 VALUES ('J.K. Rowling', 'Inglaterra'),
 ('Clive Stamples Lewis', 'Inglaterra'),
@@ -66,7 +65,6 @@ VALUES ('J.K. Rowling', 'Inglaterra'),
 ('Ciro Botelho - Tiririca', 'Brasil'),
 ('Bianca Mól', 'Brasil');
 
-DELETE FROM EDITORA;
 INSERT INTO EDITORA (nome)
 VALUES ('Rocco'),
 ('Wmf Martins Fontes'),
@@ -74,7 +72,6 @@ VALUES ('Rocco'),
 ('Belas Letras'),
 ('Matrix');
 
-DELETE FROM LIVRO;
 INSERT INTO LIVRO (ISBN, titulo, ano,  FK_EDITORA_Atributo_1, FK_CATEGORIA_id)
 VALUES ('8532511015', 'Harry Potter e A Pedra Filosofal', 2000, 16, 1),
 ('9788578270698', 'As Crônicas de Nárnia', 2009, 17, 1),
@@ -84,7 +81,6 @@ VALUES ('8532511015', 'Harry Potter e A Pedra Filosofal', 2000, 16, 1),
 ('9788588345670', 'Garota Desdobrável', 2015, 18, 1),
 ('85325120062', 'Harry Potter e o prisioneiro de Azkaban', 2000, 16, 1);
 
-DELETE FROM LIVRO_AUTOR_ESCRITO;
 INSERT INTO LIVRO_AUTOR_ESCRITO (FK_LIVRO_id, FK_AUTOR_id)
 VALUES (1,1),
 (2,2),
@@ -95,9 +91,23 @@ VALUES (1,1),
 (7,1);
 
 --------------------------------------------------------------------------
-SELECT L.ISBN, L.titulo, L.ano, L.FK_EDITORA_Atributo_1, L.FK_CATEGORIA_id
-FROM LIVRO AS L;
-
+-- 7
+SELECT *
+FROM LIVRO as L
+ORDER BY L.titulo ASC;
+-- 8
+SELECT *
+FROM AUTOR as A
+ORDER BY A.nome ASC;
+-- 9
+SELECT *
+FROM CATEGORIA as C
+ORDER BY C.descricao ASC;
+-- 10
+SELECT *
+FROM LIVRO as L
+WHERE (L.descricao = 'Humor' OR L.descricao = 'Ficção Científica')
+  AND L.ano BETWEEN 2000 AND 2010;
 
 --------------------------------------------------------------------------
 SELECT C.descricao, C.id
