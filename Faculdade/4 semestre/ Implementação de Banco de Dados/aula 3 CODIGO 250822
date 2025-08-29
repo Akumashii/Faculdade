@@ -217,3 +217,35 @@ WHERE EXISTS(
 			SELECT 51151551155115515115
 			FROM DEPARTAMENTO AS D
 			WHERE D.Cpf_gerente = '33344555587');
+
+-- LISTAR FUNCIONARIOS QUE SAO GERENTES DE ALGUM DEPARTAMENTO
+
+
+-- ALL 
+-- Encontrar funcionários que ganham mais do que qualquer funcionário do departamento de 'Administração
+
+
+SELECT F.Salario, F.Pnome, F.Unome
+FROM FUNCIONARIO AS F
+WHERE F.Salario > ALL(
+					SELECT F.Salario
+					FROM FUNCIONARIO AS F
+					INNER JOIN DEPARTAMENTO AS D
+					ON F.Dnr = D.Dnumero
+					WHERE D.Dnome = 'Administração');
+
+-- ALL
+-- Encontrar projetos que exigem mais horas do que todos os projetos no local 'Itu'
+
+SELECT P.Projnome, SUM(TE.Horas)
+FROM PROJETO AS P
+INNER JOIN TRABALHA_EM AS TE
+ON TE.Pnr = P.Projnumero
+GROUP BY P.Projnome
+HAVING SUM(TE.Horas) > ALL( -- TO VENDO A SOMA DAS QUANTIDADE DE HORAS DE TODOS OS PROJETOS POR REGIAO
+						SELECT SUM(TE.Horas)
+						FROM PROJETO AS P
+						INNER JOIN TRABALHA_EM AS TE
+						ON TE.Pnr = P.Projnumero
+						WHERE P.Projlocal = 'Itu' OR P.Projlocal = 'Santo André'
+						GROUP BY P.Projlocal);
