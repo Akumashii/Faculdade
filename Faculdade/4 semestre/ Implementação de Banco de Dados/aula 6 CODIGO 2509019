@@ -59,3 +59,100 @@ SET @CPF = '88866555576'
 EXEC usp_atualizaSalario @CPF, 55000
 
 
+-- Procedure
+/*
+Crie um procedure que insira um novo funcionário mas antes verifique se já
+não existe um funcionário com o mesmo nome (nome completo)
+*/
+
+CREATE PROCEDURE usp_InserirFuncionario
+	@Pnome VARCHAR(15),
+	@Minicial CHAR(1),
+	@Unome VARCHAR(15),
+	@Cpf CHAR(11)
+AS
+BEGIN
+	IF EXISTS(	
+		SELECT *
+		FROM FUNCIONARIO AS F
+		WHERE F.Pnome = @Pnome
+			AND F.Minicial = @Minicial
+			AND F.Unome = @Unome
+		)
+	BEGIN 
+		PRINT 'JÁ EXISTE UM FUNCIONARIO COM ESTE NOME.'
+		RETURN;
+	END
+	INSERT INTO FUNCIONARIO(Pnome, Minicial, Unome, Cpf)
+	VALUES(@Pnome, @Minicial, @Unome, @Cpf);
+END
+
+EXEC usp_InserirFuncionario 'Guilherme', 'F', 'Rolim', '05805805805';
+EXEC usp_InserirFuncionario 'Vanessa', 'C', 'Nascimento', '10710710719';
+EXEC usp_InserirFuncionario 'Luiza', 'L', 'Karlec', '76076076076018';
+
+
+-- REFAZER REFAZER 
+-- Procedure
+-- Crie um procedure que insira um novo departamento com sua respectiva localidade
+CREATE PROCEDURE usp_InserirDepartamento
+	@NomeDepartamento VARCHAR(50),
+	@LocalDepartamento VARCHAR(50)
+AS
+BEGIN
+	IF EXISTS(	
+		SELECT *
+		FROM DEPARTAMENTO AS D
+		FULL JOIN LOCALIZACAO_DEP AS L
+			ON L.Dnumero = D.Dnumero
+		WHERE D.Dnome = @NomeDepartamento
+			AND L.Dlocal = @LocalDepartamento
+		)
+	BEGIN 
+		PRINT 'JÁ EXISTE UM DEPARTAMENTO NESTE LOCAL.'
+		RETURN;
+	END
+	INSERT INTO DEPARTAMENTO(Dnome, )
+	VALUES();
+END
+
+
+-- Procedure
+/*
+Crie um procedure que faz uma listagem dos funcionários por departamento, mas
+se o departamento não for especificado, o procedimento lista todos os funcionarios
+*/
+
+ALTER PROCEDURE usp_ListaFuncDep 
+	@NomeDepartamento VARCHAR(50)
+	= NULL
+AS
+BEGIN
+	
+	IF @NomeDepartamento IS NOT NULL
+		BEGIN
+			SELECT *
+			FROM FUNCIONARIO AS F
+			FULL JOIN DEPARTAMENTO AS D
+				ON F.Dnr = D.Dnumero
+			WHERE @NomeDepartamento = D.Dnome;
+		END
+	ELSE
+		BEGIN 
+			SELECT *
+			FROM FUNCIONARIO;
+		END
+END
+
+EXEC usp_ListaFuncDep 'Pesquisa'
+
+
+-- Procedure Parametro de Saída
+CREATE PROCEDURE usp_dobro (@valor as INT OUTPUT)
+AS
+SELECT @valor*2
+RETURN
+
+DECLARE @custo AS INT = 15;
+EXEC usp_dobro @custo OUTPUT;
+SELECT @custo
