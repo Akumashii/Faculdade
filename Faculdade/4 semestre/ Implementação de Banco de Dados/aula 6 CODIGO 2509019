@@ -1,0 +1,61 @@
+-- Procedure
+-- Crie um procedimento que exiba seu nome.
+ALTER PROCEDURE usp_exibeNome 
+	@nome varchar(50) 
+AS
+BEGIN
+	PRINT 'Seu nome é: ' + @nome;
+END;
+
+
+EXEC usp_exibeNome 'Frazzon';
+
+-- Procedure
+-- Crie um procedure que liste o nome completo dos funcionários e o nome dos seus respectivos departamentos.
+ALTER PROCEDURE usp_listaDadosFunc 
+AS
+BEGIN
+	SELECT F.Pnome+' '+F.Minicial+'. '+F.Unome AS Nome, D.Dnome AS Departamento
+	FROM FUNCIONARIO AS F
+	FULL JOIN DEPARTAMENTO AS D
+		ON F.Dnr = D.Dnumero
+END
+
+EXEC usp_listaDadosFunc;
+
+-- Criptografia
+
+CREATE PROCEDURE usp_Funcionario
+WITH ENCRYPTION
+AS
+SELECT *
+FROM FUNCIONARIO
+
+EXEC sp_helptext usp_Funcionario; -- nao da pra ver 
+
+-- Procedure UPDATE
+/* 
+Crie uma procedure que atualiza o salário de um funcionário baseado no CPF
+se não encontrar nenhum funcionário com o CPF passado exiba uma mensagem.
+*/
+
+ALTER PROCEDURE usp_atualizaSalario 
+	@CPF VARCHAR(11),
+	@NovoSalario DECIMAL(10,2)
+AS
+BEGIN
+	--Atualiza
+	UPDATE FUNCIONARIO
+	SET Salario = @NovoSalario
+	WHERE Cpf = @CPF
+
+	IF @@ROWCOUNT = 0 
+		PRINT 'CPF NÃO ENCONTRADO'
+END
+
+DECLARE @CPF VARCHAR(11);
+SET @CPF = '88866555576'
+
+EXEC usp_atualizaSalario @CPF, 55000
+
+
