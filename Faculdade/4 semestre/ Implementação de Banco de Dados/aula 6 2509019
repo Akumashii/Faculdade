@@ -47,6 +47,23 @@ assim, usando o 'sp_helptext' NAO posso ver conteudo do procedure
 
 ### Modificar Store Procedure
 
+### Parâmetros de Saída
+
+Habilitam um procedimento armazenado a retornar dados ao procedimento chamado
+
+Usamos a palavavra-chave OUTPUT quando o procedimento é criado, também quando é chamado
+
+no procedimento armazenado, o procedimento de saída aparece como uma variável local
+
+no procedimento chamador, uma variável deve ser criada para receber o parâmetro de saída
+
+``` sql
+ALTER PROCEDURE teste (@par1 as INT OUTPUT)
+AS
+SELECT @par1*2
+RETURN
+```
+
 # Comandos a parte
 
 EXEC sp_helptext usp_procedimento; -- para ver linha por linha do procedure
