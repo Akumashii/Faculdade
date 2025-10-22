@@ -1,0 +1,125 @@
+ifconfig
+sudo su
+apt install net-tools
+ifconfig
+ifconfig enp0s31f6:0 192.168.0.9 netmask 255.255.255.252 up
+ifconfig
+cat /proc/sys/net/ipv4/ip_forward
+echo 1 > /proc/sys/net/ipv4/ip_forward
+cat /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE
+route -n
+
+
+laboratorio@LAB24DT01:~$ ifconfig
+Comando 'ifconfig' não encontrado, mas poder ser instalado com:
+sudo apt install net-tools
+laboratorio@LAB24DT01:~$ sudo su
+[sudo] senha para laboratorio: 
+root@LAB24DT01:/home/laboratorio# ifconfig
+Comando 'ifconfig' não encontrado, mas poder ser instalado com:
+apt install net-tools
+root@LAB24DT01:/home/laboratorio# apt install net-tools
+Lendo listas de pacotes... Pronto
+Construindo árvore de dependências... Pronto
+Lendo informação de estado... Pronto        
+Os seguintes pacotes foram instalados automaticamente e já não são necessários:
+  chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi i965-va-driver
+  intel-media-va-driver libaacs0 libaom3 libass9 libavcodec58 libavformat58
+  libavutil56 libbdplus0 libblas3 libbluray2 libbs2b0 libchromaprint1
+  libcodec2-1.0 libdav1d5 libflashrom1 libflite1 libftdi1-2 libgme0 libgsm1
+  libgstreamer-plugins-bad1.0-0 libigdgmm12 liblilv-0-0 libllvm13 libmfx1
+  libmysofa1 libnorm1 libopenmpt0 libpgm-5.3-0 libpostproc55 librabbitmq4
+  librubberband2 libserd-0-0 libshine3 libsord-0-0 libsratom-0-0
+  libsrt1.4-gnutls libswresample3 libswscale5 libudfread0 libva-drm2
+  libva-wayland2 libva-x11-2 libva2 libvdpau1 libvidstab1.1 libx265-199
+  libxvidcore4 libzimg2 libzmq5 libzvbi-common libzvbi0 mesa-va-drivers
+  mesa-vdpau-drivers pocketsphinx-en-us va-driver-all vdpau-driver-all
+Utilize 'sudo apt autoremove' para os remover.
+Os NOVOS pacotes a seguir serão instalados:
+  net-tools
+0 pacotes atualizados, 1 pacotes novos instalados, 0 a serem removidos e 9 não atualizados.
+É preciso baixar 204 kB de arquivos.
+Depois desta operação, 819 kB adicionais de espaço em disco serão usados.
+Obter:1 http://br.archive.ubuntu.com/ubuntu jammy-updates/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5.4 [204 kB]
+Baixados 204 kB em 0s (1.870 kB/s)
+A seleccionar pacote anteriormente não seleccionado net-tools.
+(Lendo banco de dados ... 214807 ficheiros e directórios actualmente instalados.
+)
+A preparar para desempacotar .../net-tools_1.60+git20181103.0eebece-1ubuntu5.4_a
+md64.deb ...
+A descompactar net-tools (1.60+git20181103.0eebece-1ubuntu5.4) ...
+Configurando net-tools (1.60+git20181103.0eebece-1ubuntu5.4) ...
+A processar 'triggers' para man-db (2.10.2-1) ...
+root@LAB24DT01:/home/laboratorio# ifconfig
+enp0s31f6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.104.16.14  netmask 255.255.255.192  broadcast 10.104.16.63
+        inet6 fe80::a4c:24af:f7a2:a143  prefixlen 64  scopeid 0x20<link>
+        ether d0:94:66:e8:11:39  txqueuelen 1000  (Ethernet)
+        RX packets 99817  bytes 150140719 (150.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12192  bytes 905165 (905.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  memory 0x70500000-70520000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Loopback Local)
+        RX packets 202  bytes 17711 (17.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 202  bytes 17711 (17.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@LAB24DT01:/home/laboratorio# ifconfig enp0s31f6:0 192.168.0.9 netmask 255.255.255.252 up
+root@LAB24DT01:/home/laboratorio# ifconfig
+enp0s31f6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.104.16.14  netmask 255.255.255.192  broadcast 10.104.16.63
+        inet6 fe80::a4c:24af:f7a2:a143  prefixlen 64  scopeid 0x20<link>
+        ether d0:94:66:e8:11:39  txqueuelen 1000  (Ethernet)
+        RX packets 99879  bytes 150145704 (150.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12208  bytes 906827 (906.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  memory 0x70500000-70520000  
+
+enp0s31f6:0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.9  netmask 255.255.255.252  broadcast 192.168.0.11
+        ether d0:94:66:e8:11:39  txqueuelen 1000  (Ethernet)
+        device interrupt 19  memory 0x70500000-70520000  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Loopback Local)
+        RX packets 202  bytes 17711 (17.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 202  bytes 17711 (17.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@LAB24DT01:/home/laboratorio# cat /proc/sys/net/ipv4/ip_forward
+0
+root@LAB24DT01:/home/laboratorio# echo 1 > /proc/sys/net/ipv4/ip_forward
+root@LAB24DT01:/home/laboratorio# cat /proc/sys/net/ipv4/ip_forward
+1
+root@LAB24DT01:/home/laboratorio# sudo iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE
+root@LAB24DT01:/home/laboratorio# route -n
+Tabela de Roteamento IP do Kernel
+Destino         Roteador        MáscaraGen.    Opções Métrica Ref   Uso Iface
+0.0.0.0         10.104.16.1     0.0.0.0         UG    100    0        0 enp0s31f6
+10.104.16.0     0.0.0.0         255.255.255.192 U     100    0        0 enp0s31f6
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s31f6
+192.168.0.8     0.0.0.0         255.255.255.252 U     0      0        0 enp0s31f6
+root@LAB24DT01:/home/laboratorio# ping 192.168.0.10
+PING 192.168.0.10 (192.168.0.10) 56(84) bytes of data.
+64 bytes from 192.168.0.10: icmp_seq=1 ttl=64 time=0.351 ms
+64 bytes from 192.168.0.10: icmp_seq=2 ttl=64 time=0.564 ms
+^C
+--- 192.168.0.10 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1059ms
+rtt min/avg/max/mdev = 0.351/0.457/0.564/0.106 ms
+root@LAB24DT01:/home/laboratorio# ^C
+root@LAB24DT01:/home/laboratorio# ^C
+root@LAB24DT01:/home/laboratorio# ^C
+root@LAB24DT01:/home/laboratorio# 
+
