@@ -65,28 +65,3 @@ ELSE
 obs: @@ERROR é para o erro do ultimo comando dado
 ele é ótimo para fazer update, inserts....
 
-
-vfbfngnesdgnshmhsjtrhgrzsgyrz
-
-
-
-
-1'q2we3e3w2q1aswswwww
-
-
-
-
-´´p
-pp
-pp
-pp
-pppp
-p
-pp
-p
-pu
-u
-uu
-
-uuuii
-21111111111111111112  222  2@@@@@@@@@@@@@@@@  1  1  1  1  1    1  w  221  21  11  1  
