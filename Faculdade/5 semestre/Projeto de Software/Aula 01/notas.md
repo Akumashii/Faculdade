@@ -47,7 +47,7 @@ Software, por definição é:
   - desgaste único 
   - fabricação (sem materia-prima)
  
-#### Metodologia
+#### Etapas de Desenvolvimento
 
 As etapas de metodologia de um produto seguem:
 - Comunicação - Requisitos de Software
@@ -58,8 +58,40 @@ As etapas de metodologia de um produto seguem:
 
 Analogia da Casa, o cliente vem com a ideia e pede que quer a casa com X piso, Y parede e Z teto (Comunicação); depois de garantir quais são os **Requisitos** da casa montamos a planta da casa, além de custo e tempo (Planejamento); ....................................................................
 
-Q.A. (Quality Assurance) 
-Gerencia,
+Q.A. (Quality Assurance) - Com ênfase na transição da construção com entrega;  
+Gerencia - Com ênfase no planejamento;
+Teste em todas as etapas da engenharia.
+
+#### Processo - Ciclo de Vida de Desenvolvimento de Software
+
+
+
+## Exercício
+
+**Objetivo:**
+
+O objetivo da atividade é que os alunos criem um aplicativo de cadastro de produtos utilizando Java, com uma interface gráfica que permita a inserção de dados e o armazenamento desses dados em um arquivo de texto no formato CSV.
+
+**Requisitos do Sistema:**
+
+Cadastro de Produtos:
+O sistema deve permitir o cadastro de produtos com as seguintes informações:
+Nome do produto (Texto)
+Código do produto (Texto numérico)
+Descrição do produto (Texto)
+Preço do produto (Decimal)
+Quantidade disponível (Número inteiro)
+
+**Armazenamento em Arquivo CSV:**
+
+Os dados dos produtos cadastrados devem ser salvos em um arquivo de texto no formato CSV (Comma Separated Values), para que possam ser facilmente lidos, manipulados e importados por outras ferramentas.
+
+O arquivo CSV deve seguir a seguinte estrutura de colunas:
+Código, Nome, Descrição, Preço, Quantidade
+
+**Projeto:**
+
+O sistema dever ser representado através de algum projeto (livre, use sua criatividade/conhecimento).
 
 
 
