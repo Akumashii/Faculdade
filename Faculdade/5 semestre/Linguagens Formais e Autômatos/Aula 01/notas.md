@@ -40,6 +40,8 @@ Tradutores de linguagens de programação de programação
 3) Formalismo Denotacional
   - Expressão Regular
 
+---
+
 ## Conceitos Iniciais
 
 ### Definições
@@ -85,7 +87,7 @@ L2 = {1, 01, 11, 001, 011, ...}
 6) Concatenação
 A concatenação é uma operação binária que associa a cada par de palavras uma terceira palavra formada pela justaposição da primeira com a segunda. Essa operação satisfaz às propriedades descritas a seguir, Considerando que v, w, t são palavras iguais.
 
-7)Concatenação Sucessiva
+7) Concatenação Sucessiva
 A concatenação sucessiva de uma palavra (com ela mesma), $w^n$, é definida como segue:
 
 a) w $\neq$ $\varepsilon$
