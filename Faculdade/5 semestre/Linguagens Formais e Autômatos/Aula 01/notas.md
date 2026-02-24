@@ -88,18 +88,10 @@ A concatenação é uma operação binária que associa a cada par de palavras u
 7)Concatenação Sucessiva
 A concatenação sucessiva de uma palavra (com ela mesma), $w^n$, é definida como segue:
 
-a) w ≠ $\varepsilon$
-
-.
-.
-.
-.
-
-.
-.
-
-
-
-
-
-
+a) w $\neq$ $\varepsilon$
+- $w^0$ = $\varepsilon$
+- $w^n$ = $w^{n-1}$ w, para n > 0
+    
+b) w = $\varepsilon$ 
+- $w^0$ é indefinida
+- w^n = $\varepsilon$, para n > 0
