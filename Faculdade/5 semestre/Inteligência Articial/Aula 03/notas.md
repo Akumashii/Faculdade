@@ -27,7 +27,7 @@
       - SEMPRE se chega na solução melhor
     - busca de heurística (menos processamento e menos consumo de memória)
       - NEM SEMPRE se chega na solução melhor (depende da heurística)
-     
+
 - solucionar um problema com métodos de busca exige a modelagem de:
   - estados
   - regras de transição
