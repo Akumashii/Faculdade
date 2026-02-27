@@ -32,4 +32,5 @@
   - estados
   - regras de transição
   - restrições
-  - visitados      
+  - visitados
+  - função objetivo, saber se o sistema atingiu a solução
