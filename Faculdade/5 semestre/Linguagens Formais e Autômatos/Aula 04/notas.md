@@ -31,3 +31,12 @@ Condições de parada:
 - Processa o último símbolo da fita e assume um estado final: Aceita
 - Processa o último símbolo da fita e assume um estado não final: Rejeita
 - Função programa indefinida para o argumento: Rejeita
+
+### Tabela 
+
+| $\sigma$  |   a    |   b   |
+| --------- | ------ | ----- |
+| q0        | q1     | q0    |
+| q1        | q0     | q1    |
+
+M = ({a,b}, {q0, q1} q0, {q1})
