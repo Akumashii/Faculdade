@@ -7,22 +7,28 @@ Artefato: desenvolvimentos que contém textos ou códigos
 
 ## Extreme Programming - XP
 
-Começa o ciclo com planejamento, 
-- valores das histórias de usuários 
+Começa o ciclo com planejamento:
+- valores das histórias de usuário
 - critérios de teste de aceitação 
 - plano de iteração
 
+
 1) Planejamento (comunicação e planejamento)
-  -
-2) Projeto (
+
+3) Projeto (
+
   - projeto simples
   - cartões CRC
   - soluções pontuais, protótipos (refinar requisito, entender melhor)
+
 3) Codificações
+ 
   - programação dupla: técnica de revisão, dividi-se em: um faz um código e outro revisa o código (SQA)
   - refatoração, refabricação
   - cria os testes unitários
+
 4) Teste
+  
   - teste de aceitação
   - tesde de unidade
 5) Entrega
