@@ -191,3 +191,5 @@ public class Produto {
 }
 
 ```
+
+agora ao compilar o código e rodar, no banco de dados é criado a tabela "Produtos" com seus respectivos atributos.
