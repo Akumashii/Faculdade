@@ -67,7 +67,7 @@ Se 'r' e 's' são ER e denotam as linguagens 'R' e 'S', respectivamente, então:
 | ba*  | L2 = {todas as palavras que iniciam por b e possuem 0 ou mais a's na sequência  |
 | (a+b)*  | L3 = {todas as palavras sobre {a, b} }  |
 | (a+b)∗aa(a+b)∗  | L4 = {w possui aa como subpalavra} |
-| a∗ba∗ba∗ | L5 = {possui apenas b's} |
+| a∗ba∗ba∗ | L5 = {possui apenas dois b's} |
 | (a+b)∗(aa+bb)  | L6 = {w | w possui aa ou bb como sufixo}  |
 
 ### Classes de Linguagens Regulares
