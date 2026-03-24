@@ -20,7 +20,7 @@ exemplo: L2 = { $a^nb^k$ | n >= 0 e k >= 0 }
 
 O processamento de um AFE é análogo a um AFN, adicionalmente, o processo de entrada vazia não é determinístico, ou seja, um AF pode processar a entrada assume simultaneamente os estados destino e origem (esse último é sempe um caminho alternativo)
 
-### Definição AFNE
+## Definição AFNE
 
 Um Autômato Finito com Movimentos Vazios (AFNE ou AFE) é uma 5-ulpa:
 
@@ -40,7 +40,7 @@ Uma Expressão Regular é definida a partir de conjuntos básicos e operações 
 
 Uma linguagem gerada por uma expressão regular é representada por L(r) ou GERA(r)
 
-### Definição 
+## Definição 
 
 Uma Expressão Regular (ER) sobre um alfabeto $\Sigma$ definida:
 - $\varnothing$ é uma ER e denota a Linguagem Vazia, L = {}
@@ -70,7 +70,8 @@ Se 'r' e 's' são ER e denotam as linguagens 'R' e 'S', respectivamente, então:
 | a∗ba∗ba∗ | L5 = {possui apenas dois b's} |
 | (a+b)∗(aa+bb)  | L6 = {w | w possui aa ou bb como sufixo}  |
 
-### Classes de Linguagens Regulares
+## Classes de Linguagens Regulares
 
 A classe das expressões regulares denota exatamente a classe das linguagens regulares, ou seja:
--
+1) Se r é uma Expressão Regular, então GERA(r) é uma Linguagem Regular.
+	- Uma linguagem é regular se e somente se é possível construir um AFD ou um AFN ou um AFE que reconheça a linguagem. Assim, construir um AF a partir de uma ER tal que ACEITA(M) = GERA(r), prova que uma ER gera uma linguagem regular. 
