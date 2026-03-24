@@ -50,7 +50,7 @@ Qualquer símbolo x $\in$ $\Sigma$ é uma ER e denota a Linguagem contendo {x}
 - exemplo: a denota L = {a}
 
 Se 'r' e 's' são ER e denotam as linguagens 'R' e 'S', respectivamente, então:
-- (r + s) é ER e denota a linguagem R $\union$ S
+- (r + s) é ER e denota a linguagem R $\cup$ S
   -  exemplo: (a + b) denota L = {a + b}
 - (rs) é ER e denota a linguagem RS = { uv | u $\in$ R e v $\in$ S}
 	- exemplo: (ab) denota L = {ab}
