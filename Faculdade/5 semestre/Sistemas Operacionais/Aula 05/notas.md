@@ -113,3 +113,22 @@ Aplicações em PC são multithreading
 	- join()
 
 ### Estados de threads
+
+# POSIX Threads
+
+As principais funções da biblioteca estão relacionadas à criação a
+
+- Função pthread_create
+	- cria uma nova threaad, permitindo a execução concorrente dentro do programa. Seu protótipo recebe quatro parâmetros:
+		- o identificador da thread
+		- os atributos
+		- função que será executada pela thread
+		- e o argumento que será passado pela função
+
+- pthread_exit,
+	- finalza a exeução de uma thread, podendo retornar um valor que posteriormente pode ser recuperado por outra thread
+- pthread_join
+	- suspende a exeução da thrend que a chamou até que a thread especificada como argumento seja finalizada
+	- mecanismo para sincronizar a execução entre threads, garantindo que uma só continue após a conclusão da outra
+
+ 
