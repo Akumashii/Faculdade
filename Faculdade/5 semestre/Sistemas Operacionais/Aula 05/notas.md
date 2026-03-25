@@ -110,6 +110,6 @@ Aplicações em PC são multithreading
 	- run()
 	- start()
 	- sleep()
+	- join()
 
 ### Estados de threads
-	- join()
