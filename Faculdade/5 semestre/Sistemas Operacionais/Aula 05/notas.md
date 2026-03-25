@@ -120,10 +120,10 @@ As principais funções da biblioteca estão relacionadas à criação a
 
 - Função pthread_create
 	- cria uma nova threaad, permitindo a execução concorrente dentro do programa. Seu protótipo recebe quatro parâmetros:
-		- o identificador da thread
-		- os atributos
-		- função que será executada pela thread
-		- e o argumento que será passado pela função
+		1) o identificador da thread
+		2) os atributos (padrão NULL)
+		3) função que será executada pela thread
+		4) e o argumento que será passado pela função
 
 - pthread_exit,
 	- finalza a exeução de uma thread, podendo retornar um valor que posteriormente pode ser recuperado por outra thread
