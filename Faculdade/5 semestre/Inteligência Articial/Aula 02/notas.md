@@ -1,6 +1,7 @@
 ### Problemas que a IA resolve
 
 1) Diagnóstico, reconhecimento de padrão
+2) Problemas que não se sabe como chegar no estado final
 
 
 ### Oque é uma IA?
