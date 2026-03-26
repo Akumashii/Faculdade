@@ -16,7 +16,8 @@ métodos heurísticos (com função "visitados"):
   - custo Real - g(h) - olha o 
 - Guloso
   - Amplitude/Largura -> Fila
-  - Custo Estimado - h(n) 
+  - Custo Estimado - h(n)
+  - além disso, ele compara constantemente vendo se os "tios" dele são melhores ou não
 - A*
   - Amplitude -> Fila
   - Combinação -> custo real (corrigido) + custo estimado
@@ -26,6 +27,7 @@ métodos heurísticos (com função "visitados"):
         - └> (cR1 + cR2)+ cE
           - └> (cR1 + cR2 + cR3) + cE
             - └> (cR1 + cR2 + cR3 + ...) + cE
+      - além disso, ele compara constantemente vendo se os "tios" dele são melhores ou não
 
 Heurística ou Informação
 - └> custo REAL - g(h) 
