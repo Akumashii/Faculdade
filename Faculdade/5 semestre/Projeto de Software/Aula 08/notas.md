@@ -37,6 +37,8 @@ Sequência:
 	8) Controller ->
 	9) Servidor ->
 	10) Pessoa (view)
+
+
 # revisão
 
 model -> estrutura de dados, armazena dados
