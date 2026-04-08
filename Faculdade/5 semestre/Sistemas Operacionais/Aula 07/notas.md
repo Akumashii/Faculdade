@@ -63,6 +63,10 @@ Uma fila de escalonamento não é necessariamente é implementada como FIFO (Fir
 O Escalonamento por ser:
 - Preemptivo
 - Não-Preemptivo ou Cooperativo
+	- O processo, após ter a CPU alocada, mantém o uso até liberá-la
+	- Término da execução
+	- Passagem para o estado Em Espera
+	- Não é necessário o temporizador de hardware
 
 #### Escalonamento Preemptivo
 
