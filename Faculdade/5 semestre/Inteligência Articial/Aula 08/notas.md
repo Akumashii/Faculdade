@@ -1,4 +1,6 @@
 # PROLOG
+método de busca = PROFUNDIDADE
+motor de raciocínio DEDUTIVO
 
 Amplamente utilizada no desenvolvimento de aplicações que envolvem inteligência artificial, processamento de linguagem natural e sistemas **Baseados em Conhecimento**.
 
