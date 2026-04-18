@@ -6,6 +6,9 @@
    
 ``` prolog
 % QUESTÃO 1 & 2
+aluno(luiza).
+aluno(vanessa).
+aluno(diana).
 
 disciplina("Inteligência Artificial").
 disciplina("Estrutura de Dados").
@@ -15,18 +18,27 @@ pre_requisito("Algoritmos B", "Estrutura de Dados").
 pre_requisito("Estrutura de Dados", "Inteligência Artificial").
 
 
-ja_cursou("Luiza", "Algoritmos B").
-ja_cursou("Vanessa", "Estrutura de Dados").
-ja_cursou("Diana", "Inteligência Artificial").
+cursou(luiza, "Algoritmos B").
+cursou(vanessa, "Estrutura de Dados").
+cursou(diana, "Inteligência Artificial").
 
 
 pode_cursar(Aluno, Disciplina) :-
-	ja_cursou(Aluno, Pre),
-	pre_requisito(Pre, Disciplina).
+	aluno(Aluno),
+	disciplina(Disciplina),
+	not(cursou(Aluno, Disciplina),
+	pre_requisito(Pre, Disciplina),
+	cursou(Aluno, Pre).
 
-nota("Luiza", "Algoritmos B", 5.0).
-nota("Vanessa", "Estrutura de Dados", 7.0).
-nota("Diana", "Inteligência Artificial", 9.0).
+pode_cursar(Aluno, Disciplina) :-
+	aluno(Aluno),
+	disciplina(Disciplina),
+	not(cursou(Aluno, Disciplina),
+	not(pre_requisito(_,Disciplina)).
+
+nota(luiza, "Algoritmos B", 5.0).
+nota(vanessa, "Estrutura de Dados", 7.0).
+nota(diana, "Inteligência Artificial", 9.0).
 
 aprovado(Aluno, Disciplina) :-
     nota(Aluno, Disciplina, Valor), 
@@ -68,12 +80,83 @@ pode_viajar(CidadeA, CidadeB) :-
 5) Cardápio: Crie fatos ingrediente(Prato, Item) e vegado(Item). Escreva a regra prato_vegano(Prato) que é verdadeira apenas se todos os ingredientes forem veganos (útil para introduzir o conceito de negação ou falha)
 6) Streaming: Com fatos filme(Nome, Genero) e usuario_gosta(Usuario, Genero), crie a regra recomendar(Filme, Usuario).
 
+``` prolog
+%filme(nome, genero).
+filme(star_wars, ficcao).
+filme(senhor_dos_aneis, fantasia).
+filme(hobbit, fantasia).
+filme(blade_runner, ficcao).
+filme(it, terror).
+
+usuario_gosta(diana, ficcao).
+usuario_gosta(dianna, fantasia).
+usuario_gosta(luiza, terror).
+usuario_gosta(vanessa, terror).
+
+recomendar(F, U) :-
+	filme(F, Genero),
+	usuario_gosta(U, Genero).
+```
+
 # Atividade - Domínio: Mundo de Blocos (Clássico da IA)
 
 7) Empilhamento: Use fatos sobre(BlocoA, BlocoB) (A está em cima de B) e no_chao(BlocoB). Crie a regra abaixo(X, Y) e a regra bloco_livre(X) (se não há nada sobre ele).
 
+``` prolog
+sobre(4,3).
+sobre(3,2).
+sobre(2,1).
+sobre(1,0).
+
+abaixo(Bab, Bac) :-
+	sobre(Bab, Bac).
+
+abaixo(Bab, Bac) :-
+	sobre(Bac, I),
+	abaixo(Bab, I).
+```
 # Atividade - Domínio: Classificação e Regras de Negócio
 
 8) Zoologia Básica: Crie fatos sobre características (ex: tem_penas(pinguim), poe_ovos(pinguim)) e regras para classificar: ave(X) :- tem_penas(X), poe_ovos(X).
+
+```prolog
+tem_penas(pinguim).
+tem_penas(galinha).
+tem_penas(coruja).
+
+poe_ovos(pinguim).
+poe_ovos(galinha).
+poe_ovos(coruja).
+
+ave(A) :-
+	tem_penas(A),
+	poe_ovos(A).
+```
 9) E-commerce: Com fatos cliente(Nome, Saldo) e produto(Item, Preco). Crie a regra pode_comprar(Nome, Item).
+
+```prolog
+cliente(luiza, 1000).
+cliente(vanessa, 40).
+cliente(diana, 300).
+
+produto(pastel, 11).
+produto(bloco, 4).
+produto(cafe, 2).
+
+pode_comprar(C,P) :-
+	cliente(C, Saldo),
+	produto(P, Custo),
+	Saldo >= Custo.
+
+
+```
 10) Torneio de Jogos: Com fatos venceu(JogadorA, JogadorB). Crie uma regra invicto(Jogador) que verifica se ninguém venceu aquele jogador.
+
+```prolog
+venceu(gramado, canela).
+venceu(canela, santa_maria).
+venceu(gramado, santa_maria).
+
+invicto(J) :-
+	not(venceu(_, J)).
+```
