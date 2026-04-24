@@ -108,11 +108,39 @@ entradas:
 			mover(novaPopulacao,populacao)
 			apagar(novaPopulacao)
 
-Curiosidades:
-	1) muita lista
-	2) muito Random -> AG é o maior algoritmo de aleatoriedade da PARÓQUIA, só que controlado
-	3) regra de 3
-	4) orientação a objetos
+Curiosidades:  
+1) muita lista
+2) muito Random -> AG é o maior algoritmo de aleatoriedade da PARÓQUIA, só que controlado
+3) regra de 3
+4) orientação a objetos
+
+# Seleção
+
+3 técnicas:
+- Roleta
+- Torneio
+- Amostragem Estocrástica
 
 ---
+Roleta
+---
 
+Algoritmo ideal para pouca população
+- Aptidão porcentual
+- Mais simples e mais utilizado, não necessáriamente bom (tal qual o método de ordenação bubble) 
+- Os indivíduos são elecionados a partir de uma roleta, como em jogo de azar, via "agulha"  
+- Cada indivíduo, via sua aptidão, ocupa mais ou menso espaço na roleta  
+- A roleta é girada a quantidade de vezes que se queira selecionar indivíduos para a nova geração (intermediária)
+
+---
+Torneio
+---
+
+Algoritmo ideal para grandes populações
+- Aptidão Relativa = aptidão/aptidão total; não tem aptidão porcentual
+- N indivíduos da população são escolhidos aleatoriamente, com a mesma probabilidade
+- O cromossomo com maior aptidão entre os N é selecionado para população intermediária
+- O processo até que a população intermediária seja preenchida
+- Em geral, a quantidade de selecionados pelo método do Torneio N = 3.
+
+- 
