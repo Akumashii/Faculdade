@@ -33,6 +33,8 @@ Toda tarefa de busca ou otimização possui:
 - Espaço de busca (possibilidades de solução de um problema)
 - Função de avaliação (
 
+---
+
 ## Algoritmos Genéticos (AG) 
 Metodo de resolução de problemas
 - Busca de Soluções em Espaço de Estados
@@ -44,9 +46,73 @@ Metodo de resolução de problemas
 - É possível operar sobre uma população de candidatos (espaço de estados) em PARALELO
 - Usa a estratégia de gerar e testar
 
-#### Fluxograma
 
+Cálculo de Aptidão
+
+---
+
+Fluxograma
+---
 <img width="761" height="566" alt="{5FDB9B81-BEA2-421B-B643-EED1741EE1FC}" src="https://github.com/user-attachments/assets/f772e8d5-b4d0-4ba5-844e-032ef55b9e7e" />
 ![Uploading {5FDB9B81-BEA2-421B-B643-EED1741EE1FC}.png…]()
 
-Cálculo de Aptidão
+---
+
+métodos:
+- método de seleção natural (os mais aptos ou os mais perto da solução ou os com menos restrições feridas irão passar para a próxima geração)
+- método de cruzamento/crossover.... vai eleger dois estados para cruzarem/reproduzirem -> METODO QUE CRIA INDIVIDUOS		- método mutação -> MÉTODO QUE CRIA INDIVIDUOS A PARTIR DA ALTERAÇÃO DE OUTRO
+- elitismo -> tem relação com a seleção, ou seja, o melhor indivíduo sempre é selecionado para a próxima geração
+
+---
+
+Problema
+---
+
+**Geração de palavras em evolução até chegar numa palavra estado final**
+
+entradas:
+- tamanhoPopulacao
+- quantidadeGeracoes
+- taxaSelecao/taxaReproducao
+- taxaMutacao
+- neste caso em especial, palavraFinal
+
+1) Pensar Orientado a Objetos
+	- Criar a classe Cromossomo (representa um estado ou um indivíduo)
+		- atributos
+		- construtor
+		- cálculo de aptidão (heurística) -> 'pulo do gato'
+
+	- Criar uma classe Util como métodos utilitários ao problema
+
+	- Criar uma classe para aplicar o AG
+		- tamanhoPopulacao
+		- quantidadeGeracoes
+		- taxaSelecao / taxaReproducao
+		- taxaMutacao
+		- neste caso em especial, palavraFinal	
+
+		inicializarPopulacao(populacao,tamanhoPopulacao,palavraFinal)
+		ordenarPopulacao(populacao) //decrescente pela aptidao
+		exibirPopulacao(populacao)
+
+		- laço 1 até quantidadeGeracoes:  
+			selecionarPopulacao(populacao,novaPopulacao,taxaSelecao)
+			reproduzirPopulacao(populacao,novaPopulacao,taxaReproducao,palavraFinal)
+			
+			mutarPopulacao(novaPopulacao,palavraFinal) //verificar a taxa ou a frequencia
+			ordenarPopulacao(novaPopulacao)
+			exibirPopulacao(novaPopulacao)
+
+			apagar(populacao)
+			mover(novaPopulacao,populacao)
+			apagar(novaPopulacao)
+
+Curiosidades:
+	1) muita lista
+	2) muito Random -> AG é o maior algoritmo de aleatoriedade da PARÓQUIA, só que controlado
+	3) regra de 3
+	4) orientação a objetos
+
+---
+
