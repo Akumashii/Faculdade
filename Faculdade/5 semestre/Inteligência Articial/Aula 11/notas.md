@@ -133,7 +133,8 @@ Algoritmo ideal para pouca população
 - Os indivíduos são elecionados a partir de uma roleta, como em jogo de azar, via "agulha"  
 - Cada indivíduo, via sua aptidão, ocupa mais ou menso espaço na roleta  
 - A roleta é girada a quantidade de vezes que se queira selecionar indivíduos para a nova geração (intermediária)
-
+-- 30% para próxima população, reprodução
+  
 ---
 Torneio
 ---
@@ -144,5 +145,4 @@ Algoritmo ideal para grandes populações
 - O cromossomo com maior aptidão entre os N é selecionado para população intermediária
 - O processo até que a população intermediária seja preenchida
 - Em geral, a quantidade de selecionados pelo método do Torneio N = 3.
-
-- 
+- 30% para próxima população, reprodução
