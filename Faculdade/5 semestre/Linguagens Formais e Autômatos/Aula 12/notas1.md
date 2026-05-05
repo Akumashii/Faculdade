@@ -42,6 +42,7 @@ Um Autômato com Pilha é uma 6-tupla:
 ---
 Função Programa do AP
 ---
+(leitura da fita, leitura da pilha & remove, gravação na pilha)
 '?' -> palavra que testa.
 
 - $(a, \varepsilon, X)$ significa ler ‘a’ da fita, não ler da pilha, gravar ‘X’ na pilha.
@@ -75,3 +76,4 @@ Pilha (memória auxiliar):
 - quando vir o 'b', removo A na pilha
 
 O resto nos slides da aula, exemplo complexo.
+
