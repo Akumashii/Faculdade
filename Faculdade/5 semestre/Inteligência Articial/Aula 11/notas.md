@@ -128,7 +128,7 @@ Roleta
 ---
 
 Algoritmo ideal para pouca população
-- Aptidão porcentual
+- Aptidão relativa/porcentual
 - Mais simples e mais utilizado, não necessáriamente bom (tal qual o método de ordenação bubble) 
 - Os indivíduos são elecionados a partir de uma roleta, como em jogo de azar, via "agulha"  
 - Cada indivíduo, via sua aptidão, ocupa mais ou menso espaço na roleta  
@@ -140,7 +140,7 @@ Torneio
 ---
 
 Algoritmo ideal para grandes populações
-- Aptidão Relativa = aptidão/aptidão total; não tem aptidão porcentual
+- Compara os N indivíduos sorteados entre si
 - N indivíduos da população são escolhidos aleatoriamente, com a mesma probabilidade
 - O cromossomo com maior aptidão entre os N é selecionado para população intermediária
 - O processo até que a população intermediária seja preenchida
