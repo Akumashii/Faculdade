@@ -254,9 +254,11 @@ Quando uma rotina do monitor não pode continuar, ela executa uma operação wai
 
 Após a operação signal, o que pode acontecer conforme:
 - Hoare: processo desbloquado executar imediatamente, suspendendo outro
-- Brinch Hanse: .....
+- Brinch Hanse: refinar o problema, exigindo que um processo que execute uma operação signal deve sair do monitor imediatamente. Se uma operação signal é executada em uma variável de condição em que vários processos estão esperando, apenas um deles é desbloqueado (determinado pelo escalonador do Sistema Operacional).
 
-Se uma variável de condição é sinalizada sem ninguém esperando nela, o sinal é perdido.
+Se uma variável de condição é sinalizada sem ninguém esperando nela, o sinal é perdido.  
+
+Adicionando a palavra synchronized em uma declaração de método, Java garante que qualquer thread que estiver começando a executar este método, nenhuma outra thread poderá realizar qualquer outro método synchronized nessa classe.
 
 Semáforos e monitores foram projetados para ambientes de memória compartilhada
 
