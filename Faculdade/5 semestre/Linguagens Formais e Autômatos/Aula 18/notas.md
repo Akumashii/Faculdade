@@ -14,7 +14,7 @@ Todo problema que por der resolvido por uma máquina de turing que executará em
 - Programa
 	- função programa ou função de transição é a função que comanda a máquina, **define a sua lógica de funcionamento**
 
-$M = M = (\Sigma, Q, \sigma, q0, F, V)$
+$M = M = (\Sigma, Q, \sigma, q0, F, V, \beta, \otimes) $ 
 - $\Sigma$ alfabeto de símbolos de entrada
 - Q conjunto de estados da máquina
 - $\sigma$ função programa
@@ -24,6 +24,7 @@ $M = M = (\Sigma, Q, \sigma, q0, F, V)$
 - .....
 - .....
 - V = é o alfabeto auxiliar (alfaveto usado com a pilha)
+- $\otimes$ marcador de início da fita, estando sempre na célula mais à esquerda
 
 # Função Programa
 
