@@ -18,11 +18,12 @@ $M = M = (\Sigma, Q, \sigma, q0, F, V, \beta, \otimes) $
 - $\Sigma$ alfabeto de símbolos de entrada
 - Q conjunto de estados da máquina
 - $\sigma$ função programa
-	- $\sigma : Q x (\Sigma \cup V \cup \\{\beta, \\}) → Q x (\Sigma \cup V \cup \beta, \\}) x \\{E, D\\}
+	- $\sigma : \space Q \times (\Sigma \cup V \cup \\{\beta, \\}) → Q \times (\Sigma \cup V \cup \beta, \\}) \times \\{E, D\\}$
  	- E representa movimento para esquerda
   	- D representa movimento para direita
-- .....
-- .....
+- q0 estado inicial da fita
+- F conjunto de estados finais
+- $\beta$ é o símbolo especial que representa as células em branco na fita, pois a fita é infinita;
 - V = é o alfabeto auxiliar (alfaveto usado com a pilha)
 - $\otimes$ marcador de início da fita, estando sempre na célula mais à esquerda
 
