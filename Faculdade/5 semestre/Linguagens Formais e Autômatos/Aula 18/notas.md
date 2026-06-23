@@ -44,3 +44,39 @@ TURING, A. M. On Computable Numbers, with an Application to the
 Entscheidungsproblem. Proceedings of the London Mathematical Society,
 s2-42, n. 1, p. 230–265, 01 1937.
 
+# Modelos equivalentes
+
+são modelos com poder computacional 
+
+- Autômato com múltiplas pilhas
+- Máquina de Turing não determinística
+- Máquina de Turing com fita infinita à esquerda e à direita
+- Máquina de Turing com múltiplas fitas
+- Máquina de Turing multidimensional
+- Máquina de Turing com múltiplas cabeças
+
+# Gramática Irrestritra
+
+Gramática sem qualquer restrição nas produções, é uma 4-upla  
+Produção é qualquer coisa produz qualquer coisa.
+
+$\alpha → \beta$, em que  
+$\alpha \\, e \\, \beta \in (V\cup T)^\*$
+
+$L = \\{a^n b^n c^n | n\geq 0\\}$  
+$G = (\\{S, C\\}, \\{a, b, c\\}, P, S)$    
+$P = \\{S → abc \mid \varepsilon,$  
+$\\quad ab → aabbC,$  
+$\\quad Cb → bC,$  
+$\\quad Cc → cc \\}$  
+
+Derivação:
+- S → abc → aabbCc → aabbcc → aaabbCbcc → aaabbbCcc → aaabbbccc → ...
+
+# Gramática Sensível ao Contexto
+
+é uma gramática G = (V, T, P, S) cuja regras de produção são:
+
+$\alpha → \beta$, em que:  
+- $\beta \in (V\cup T)^\*$  
+- $\alpha (V\cup T)^+$ tal que $\mid \alpha \mid \leq \mid \beta \mid$, exceto para $S → \varepsilon$
