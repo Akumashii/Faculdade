@@ -16,17 +16,27 @@ Tese de Church: Qualquer algoritmo pode ser processado por uma máquina de Turin
 
 # Linguagens Enumeráveis Recursivamente (LER) -> TIPO 0
 
-Linguagens deste tipo podem ser aceitas por uma Máquina de Turing
+Linguagens deste tipo podem ser aceitas por uma Máquina de Turing  
+Gramática Irrestrita -> qualquer coisa de um lado e qualquer coisa do outro lado, dificil de implementar
 
-Gramática Irrestrira -> qualquer coisa de um lado e qualquer coisa do outro lado, dificil de implementar
+# Linguagens Sensível ao Contexto (LSC) -> TIPO 1
 
+Máquina de Turing com Fita Limitada  
+Gramática Sensível ao Contexto 
 
+# Linguagens Livre do Contexto (LLC) -> TIPO 2
 
-# Linguagem Sensível ao Contexto (LSC) -> TIPO 1
+Autômato com Pilha  
+Gramática Livre do Contexto -> autômato com pilha
 
-Máquina de Turing com Fita Limitada
+# Linguagens Regulares (LR) -> TIPO 3
+
+Autômato Finito  
+Gramática Regular  
+Expressão Regular
 
 # Conjunto das Classes
+
 - LER -> máquina de turing e gramática irrestrita
 - LSC -> máquina de turing com fita limitada e gramática sensível ao contexto
 - LLC -> automato com pilha e gramática livre do contexto
